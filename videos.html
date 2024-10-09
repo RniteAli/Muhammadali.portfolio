@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Video Showcase</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7;
+        }
+
+        header {
+            background-color: #333;
+            padding: 20px;
+            text-align: center;
+            color: white;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 36px;
+        }
+
+        .video-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 40px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .video-item {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .video-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .video-item h2 {
+            padding: 15px;
+            font-size: 20px;
+            background-color: #333;
+            color: white;
+            margin: 0;
+            text-align: center;
+        }
+
+        video {
+            display: block;
+            width: 100%;
+            height: auto; /* Maintain aspect ratio */
+            background-color: #000;
+        }
+
+        /* Aspect ratio for short videos (9:16) */
+        .short-video {
+            position: relative;
+            overflow: hidden;
+            padding-top: 177%; /* 9:16 Aspect Ratio */
+        }
+
+        .short-video video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        /* Aspect ratio for regular videos (16:9) */
+        .regular-video {
+            position: relative;
+            overflow: hidden;
+            padding-top: 56.25%; /* 16:9 Aspect Ratio */
+        }
+
+        .regular-video video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        /* Responsive Design */
+        @media screen and (max-width: 600px) {
+            h1 {
+                font-size: 28px;
+            }
+
+            .video-item h2 {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>My Local Video Showcase</h1>
+    </header>
+
+    <main>
+        <div class="video-gallery">
+            <!-- Short Videos (9:16) -->
+            <div class="video-item short-video">
+                <h2>Short Video 1</h2>
+                <video controls>
+                    <source src="videos/short1.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div class="video-item short-video">
+                <h2>Short Video 2</h2>
+                <video controls>
+                    <source src="videos/short2.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div class="video-item short-video">
+                <h2>Short Video 3</h2>
+                <video controls>
+                    <source src="videos/short3.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div class="video-item short-video">
+                <h2>Short Video 4</h2>
+                <video controls>
+                    <source src="videos/short4.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div class="video-item short-video">
+                <h2>Short Video 5</h2>
+                <video controls>
+                    <source src="videos/short5.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div class="video-item short-video">
+                <h2>Short Video 6</h2>
+                <video controls>
+                    <source src="videos/short6.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div class="video-item short-video">
+                <h2>Short Video 7</h2>
+                <video controls>
+                    <source src="videos/short7.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div class="video-item short-video">
+                <h2>Short Video 8</h2>
+                <video controls>
+                    <source src="videos/short8.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div class="video-item short-video">
+                <h2>Short Video 9</h2>
+                <video controls>
+                    <source src="videos/short9.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div class="video-item short-video">
+                <h2>Short Video 10</h2>
+                <video controls>
+                    <source src="videos/short10.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+            <!-- Regular Videos (16:9) -->
+            <div class="video-item regular-video">
+                <h2>Regular Video 1</h2>
+                <video controls>
+                    <source src="videos/video1.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div class="video-item regular-video">
+                <h2>Regular Video 2</h2>
+                <video controls>
+                    <source src="videos/video2.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div class="video-item regular-video">
+                <h2>Regular Video 3</h2>
+                <video controls>
+                    <source src="videos/video3.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div class="video-item regular-video">
+                <h2>Regular Video 4</h2>
+                <video controls>
+                    <source src="videos/video4.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div class="video-item regular-video">
+                <h2>Regular Video 5</h2>
+                <video controls>
+                    <source src="videos/video5.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+    </main>
+
+</body>
+</html>
